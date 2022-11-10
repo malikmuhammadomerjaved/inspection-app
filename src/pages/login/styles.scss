@@ -1,0 +1,37 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .logo-wrapper {
+    width: 24rem;
+    margin: auto;
+    padding: 9rem 0;
+
+    .login-page-logo {
+      width: 24rem;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.5rem 4rem;
+
+    .login-heading {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #ffffff;
+      margin-bottom: 4rem;
+    }
+
+    .custom-login-button {
+      background-color: #ffffff;
+      color: #4987ce;
+      height: 5rem;
+      border: none;
+      width: 100%;
+    }
+  }
+}

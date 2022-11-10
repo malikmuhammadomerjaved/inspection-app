@@ -1,0 +1,23 @@
+.home-page-container {
+  .categories-wrapper {
+    .heading {
+      margin-bottom: 3rem;
+    }
+
+    .categories-list-wrapper {
+      display: flex;
+      list-style: none;
+
+      .category {
+        padding: 1rem;
+        background-color: #ccc;
+        border-radius: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        font-weight: 700;
+        font-size: 2rem;
+      }
+    }
+  }
+}

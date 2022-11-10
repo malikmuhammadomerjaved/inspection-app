@@ -1,0 +1,118 @@
+.inspection-slot-pickup-container {
+  background: #f9f9ff;
+  min-height: 100vh;
+
+  .heading-main {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    position: relative;
+
+    .go-back-button {
+      position: absolute;
+
+      left: 2rem;
+      top: 3rem;
+      padding: 0px 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .inner-slot-wrapper {
+    padding: 0 1.5rem;
+
+    .pick-date-container {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+
+      .pick-date-list-wrapper {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+        .date-wrapper {
+          cursor: pointer;
+
+          .date-circle {
+            padding: 1rem;
+            border-radius: 100%;
+
+            .day,
+            .date {
+              color: #000;
+            }
+
+            &.selected {
+              background: #4987ce;
+
+              .day,
+              .date {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pick-time-container {
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+
+      .pick-duration-list-wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin: 2.5rem 0;
+        list-style: none;
+
+        .duration-wrapper {
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 5px;
+          padding: 1rem;
+          background: #fff;
+          color: #000;
+          transition: all 0.2s linear;
+
+          &.selected {
+            transition: all 0.2s linear;
+            background: #4987ce;
+            color: #fff;
+          }
+        }
+      }
+
+      .pick-time-list-wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin: 2.5rem 0;
+        list-style: none;
+
+        .time-wrapper {
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 5px;
+          padding: 1rem;
+          background: #fff;
+          color: #000;
+          transition: all 0.2s linear;
+
+          &.selected {
+            transition: all 0.2s linear;
+            background: #4987ce;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .time-slot-forward-button {
+      width: 100%;
+      height: 5rem;
+      color: #fff;
+      background-color: #4987ce;
+    }
+  }
+}

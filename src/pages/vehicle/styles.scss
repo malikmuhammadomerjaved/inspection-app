@@ -1,0 +1,57 @@
+.select-vehicle-container {
+  background: #f9f9ff;
+  min-height: 100vh;
+
+  .heading-main {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    position: relative;
+
+    .go-back-button {
+      position: absolute;
+
+      left: 2rem;
+      top: 3rem;
+      padding: 0px 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .vehcile-select-inner-wrapper {
+    padding: 0 1.5rem;
+
+    .vehicles-list-wrapper {
+      list-style: none;
+
+      .vehcile-item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+
+        display: flex;
+        align-items: center;
+
+        background-color: #fff;
+
+        cursor: pointer;
+
+        &.selected {
+          background-color: rgba(73, 135, 206, 0.5);
+        }
+
+        .box-inner-content {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .vehcile-select-forward-button {
+      width: 100%;
+      height: 5rem;
+      color: #fff;
+      background-color: #4987ce;
+    }
+  }
+}

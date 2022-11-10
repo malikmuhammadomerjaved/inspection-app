@@ -1,0 +1,41 @@
+.ant-collapse.lights-form-wrapper {
+  border: none;
+  background-color: #fff;
+  border-radius: 2rem;
+
+  .ant-collapse-item {
+    .ant-collapse-header {
+      padding: 1rem 3rem;
+
+      .ant-collapse-header-text {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #1c2340;
+
+        // .collapse-header-custom {
+        //   display: flex;
+        //   align-items: center;
+
+        //   .collapse-icon {
+        //     height: 4rem;
+        //     margin-right: 2.5rem;
+        //   }
+
+        //   .title {
+        //     font-weight: 700;
+        //     font-size: 1.6rem;
+        //     color: #1c2340;
+        //   }
+        // }
+      }
+    }
+
+    .ant-collapse-content {
+      padding: 0;
+
+      .ant-collapse-content-box {
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}
