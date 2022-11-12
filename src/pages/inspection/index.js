@@ -155,7 +155,7 @@ const Inspection = () => {
       </section>
 
       <Collapse
-        defaultActiveKey={['1']}
+        defaultActiveKey={['0']}
         // onChange={onChange}
         className='collapse-forms-container'
         expandIconPosition='end'

@@ -8,11 +8,11 @@ const Lights = ({ lights, setLights }) => {
 
   return (
     <Collapse
-      defaultActiveKey={['1']}
-      className='lights-form-wrapper'
+      defaultActiveKey={['0']}
+      className='generic-form-wrapper'
       expandIconPosition='end'
     >
-      <Panel header='Front Lights' key='1'>
+      <Panel header='** Front Lights' key='1'>
         <article className='input-wrapper'>
           <h3 className='input-label'>Low Beam</h3>
           <Rate
@@ -103,21 +103,25 @@ const Lights = ({ lights, setLights }) => {
           />
         </article>
 
-        <TextArea
-          value={lights.front.generalComments}
-          onChange={(e) =>
-            setLights((st) => ({
-              ...st,
-              front: {
-                ...st.front,
-                generalComments: e.target.value,
-              },
-            }))
-          }
-          rows={4}
-        />
+        <article className='general-comments-wrapper'>
+          <h3 className='input-label'>General Comments</h3>
+          <TextArea
+            value={lights.front.generalComments}
+            onChange={(e) =>
+              setLights((st) => ({
+                ...st,
+                front: {
+                  ...st.front,
+                  generalComments: e.target.value,
+                },
+              }))
+            }
+            rows={4}
+          />
+        </article>
       </Panel>
-      <Panel header='Rear Lights' key='2'>
+
+      <Panel header='** Rear Lights' key='2'>
         <article className='input-wrapper'>
           <h3 className='input-label'>Break Light</h3>
           <Rate
@@ -226,19 +230,22 @@ const Lights = ({ lights, setLights }) => {
           />
         </article>
 
-        <TextArea
-          value={lights.rear.generalComments}
-          onChange={(e) =>
-            setLights((st) => ({
-              ...st,
-              rear: {
-                ...st.rear,
-                generalComments: e.target.value,
-              },
-            }))
-          }
-          rows={4}
-        />
+        <article className='general-comments-wrapper'>
+          <h3 className='input-label'>General Comments</h3>
+          <TextArea
+            value={lights.rear.generalComments}
+            onChange={(e) =>
+              setLights((st) => ({
+                ...st,
+                rear: {
+                  ...st.rear,
+                  generalComments: e.target.value,
+                },
+              }))
+            }
+            rows={4}
+          />
+        </article>
       </Panel>
     </Collapse>
   );

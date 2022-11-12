@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.scss';
 
+const GetStarted = lazy(() => import('./pages/getStarted'));
 const Login = lazy(() => import('./pages/login'));
+const CreateSU = lazy(() => import('./pages/createSU'));
+const CreateInspector = lazy(() => import('./pages/createInspector'));
 const Home = lazy(() => import('./pages/home'));
 const Category = lazy(() => import('./pages/category'));
 const Vehicle = lazy(() => import('./pages/vehicle'));
@@ -15,7 +18,10 @@ const App = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <main className='app-main-container'>
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<GetStarted />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/create-su' element={<CreateSU />} />
+          <Route path='/create-inspector' element={<CreateInspector />} />
           <Route path='/home' element={<Home />} />
           <Route path='/category/:category' element={<Category />} />
           <Route path='/category/vehicle' element={<Vehicle />} />
