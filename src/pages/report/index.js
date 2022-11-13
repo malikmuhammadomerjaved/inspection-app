@@ -139,6 +139,11 @@ const Report = () => {
 
               <View style={formFieldWrapper}>
                 <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Seats</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
                 <Text style={formField}>Seat Belts</Text>
               </View>
 
@@ -148,16 +153,60 @@ const Report = () => {
               </View>
 
               <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Washer & Wipers</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Rear view mirror</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
                 <Image src={crossIcon} style={formIcon} />
                 <Text style={formField}>Horn</Text>
               </View>
 
               <View style={formFieldWrapper}>
-                <Image src={NAIcon} style={formIcon} />
-                <Text style={formField}>Other</Text>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Primary bonnet release</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Floors / mats / carpet</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Dash warning lights & gauages</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>All interior lights</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Handbrake</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Steering system</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={crossIcon} style={formIcon} />
+                <Text style={formField}>Driver control pedals</Text>
               </View>
             </View>
+          </View>
+        </Page>
 
+        <Page size='A4' style={page}>
+          <View style={pageContainer}>
             <View style={formContainer}>
               <Text style={mainHeading}>Under Bonnet</Text>
 
@@ -168,17 +217,165 @@ const Report = () => {
 
               <View style={formFieldWrapper}>
                 <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Battery & electrical system</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Oil leaks / fluid leaks</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
                 <Text style={formField}>Fluid levels</Text>
               </View>
 
               <View style={formFieldWrapper}>
                 <Image src={tickIcon} style={formIcon} />
-                <Text style={formField}>Brake master cylinders</Text>
+                <Text style={formField}>Brake master cylinder</Text>
               </View>
 
               <View style={formFieldWrapper}>
-                <Image src={crossIcon} style={formIcon} />
-                <Text style={formField}>Hoses and Pipes</Text>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Drive belt & pulleys</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Hoses & pipes</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Coolent system</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Engine noise</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Fuel system</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Vehicle modification complaint</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>
+                  Vehicle compliance plate confirmed
+                </Text>
+              </View>
+            </View>
+          </View>
+        </Page>
+
+        <Page size='A4' style={page}>
+          <View style={pageContainer}>
+            <View style={formContainer}>
+              <Text style={mainHeading}>Exterior</Text>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Rust</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Panel damage</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Lamps, signal & reflactors</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Operation of doors</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Windscreens, windows & mirrors</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Under body parts</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Front suspension</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Rear suspension</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Steering components</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Engine & transmission mountings</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Exhaust & emission controls</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Drive shafts</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Oil leak to ground</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={NAIcon} style={formIcon} />
+                <Text style={formField}>Other</Text>
+              </View>
+            </View>
+          </View>
+        </Page>
+
+        <Page size='A4' style={page}>
+          <View style={pageContainer}>
+            <View style={formContainer}>
+              <Text style={mainHeading}>Wheels & Tyres</Text>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Tyres</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Wheel rims</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Side wall damage</Text>
+              </View>
+
+              <View style={formFieldWrapper}>
+                <Image src={tickIcon} style={formIcon} />
+                <Text style={formField}>Wheels & Tyres must meet man.</Text>
               </View>
 
               <View style={formFieldWrapper}>
