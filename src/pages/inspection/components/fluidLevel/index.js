@@ -4,7 +4,7 @@ const FluidLevel = ({ fluidLevel, setFluidLevel }) => {
   const { TextArea } = Input;
 
   return (
-    <section>
+    <section className='generic-form-wrapper-inner'>
       <article className='input-wrapper'>
         <h3 className='input-label'>Oil</h3>
         <Rate
@@ -50,16 +50,19 @@ const FluidLevel = ({ fluidLevel, setFluidLevel }) => {
         />
       </article>
 
-      <TextArea
-        value={fluidLevel.generalComments}
-        onChange={(e) =>
-          setFluidLevel((st) => ({
-            ...st,
-            generalComments: e.target.value,
-          }))
-        }
-        rows={4}
-      />
+      <article className='general-comments-wrapper'>
+        <h3 className='input-label'>General Comments</h3>
+        <TextArea
+          value={fluidLevel.generalComments}
+          onChange={(e) =>
+            setFluidLevel((st) => ({
+              ...st,
+              generalComments: e.target.value,
+            }))
+          }
+          rows={4}
+        />
+      </article>
     </section>
   );
 };

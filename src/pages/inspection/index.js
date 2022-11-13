@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Collapse, Button } from 'antd';
 
 import Lights from './components/lights';
@@ -17,20 +17,16 @@ import icon4 from '../../assets/icons/collapse/4.png';
 import icon5 from '../../assets/icons/collapse/5.png';
 import icon6 from '../../assets/icons/collapse/6.png';
 import icon7 from '../../assets/icons/collapse/7.png';
-import icon8 from '../../assets/icons/collapse/8.png';
 
 import vehicleIcon from '../../assets/icons/rego-icon.png';
 import { goBackIcon } from '../../assets/svg';
 import './styles.scss';
 
 const Inspection = () => {
+  const location = useLocation();
+  const { driverName, regoName } = location.state.state;
   const { Panel } = Collapse;
-  const { rego } = useParams();
   const navigate = useNavigate();
-
-  const regoSlug = rego.split('-');
-  const regoName = regoSlug[0];
-  const regoNumber = regoSlug[1];
 
   const [lights, setLights] = useState({
     front: {
@@ -132,26 +128,15 @@ const Inspection = () => {
         <span onClick={() => navigate(-1)} className='go-back-button'>
           {goBackIcon}
         </span>{' '}
-        {regoName} {regoNumber}
+        {regoName}
       </h2>
 
       <section className='inspection-inner-wrapper'>
         <article className='car-detail-wrapper'>
           <img src={vehicleIcon} alt='' className='car-icon' />
-          <h2>Driver Name 1</h2>
-          <p>KM Reading</p>
+          <h2>{driverName}</h2>
+          <p>50km</p>
         </article>
-      </section>
-
-      <section className='generate-button-container'>
-        <Button
-          type='primary'
-          shape='round'
-          className='generate-pdf-button'
-          onClick={handlePdfPage}
-        >
-          Generate Report
-        </Button>
       </section>
 
       <Collapse
@@ -237,18 +222,24 @@ const Inspection = () => {
         >
           <Other other={other} setOther={setOther} />
         </Panel>
-        <Panel
-          header={
-            <section className='collapse-header-custom'>
-              <img src={icon8} alt='' className='collapse-icon' />
-              <p className='title'>Logout</p>
-            </section>
-          }
-          key='8'
-        >
-          <p>Logout</p>
-        </Panel>
       </Collapse>
+
+      <section className='generate-button-container'>
+        <Button
+          type='primary'
+          shape='round'
+          className='generate-pdf-button'
+          onClick={handlePdfPage}
+        >
+          Generate Report
+        </Button>
+      </section>
+
+      <section className='generate-button-container'>
+        <Button type='primary' shape='round' className='generate-pdf-button'>
+          Logout
+        </Button>
+      </section>
     </section>
   );
 };

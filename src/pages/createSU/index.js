@@ -11,12 +11,24 @@ const CreateSU = () => {
     stateName: '',
     suList: [
       {
-        name: 'John',
-        stateName: 'State 1',
+        name: 'Senthil',
+        stateName: 'Victoria',
       },
       {
-        name: 'Bob',
-        stateName: 'State 2',
+        name: 'Mike',
+        stateName: 'South Australia',
+      },
+      {
+        name: 'Rahul',
+        stateName: 'New South Wales',
+      },
+      {
+        name: 'Queensland',
+        stateName: 'James',
+      },
+      {
+        name: 'Western Australia',
+        stateName: 'Michael',
       },
     ],
   });
@@ -56,20 +68,24 @@ const CreateSU = () => {
 
   const states = [
     {
-      value: 'State 3',
-      label: 'State 3',
+      value: 'Victoria',
+      label: 'Victoria',
     },
     {
-      value: 'State 4',
-      label: 'State 4',
+      value: 'South Australia',
+      label: 'South Australia',
     },
     {
-      value: 'State 5',
-      label: 'State 5',
+      value: 'New South Wales',
+      label: 'New South Wales',
     },
     {
-      value: 'State 6',
-      label: 'State 6',
+      value: 'Queensland',
+      label: 'Queensland',
+    },
+    {
+      value: 'Western Australia',
+      label: 'Western Australia',
     },
   ];
 
@@ -85,7 +101,7 @@ const CreateSU = () => {
       <section className='vehcile-select-inner-wrapper'>
         <Input
           className='login-field'
-          placeholder='Enter SU name'
+          placeholder='Enter Super User name'
           value={state.name}
           onChange={(e) =>
             setState((st) => ({
@@ -107,11 +123,11 @@ const CreateSU = () => {
           className='vehcile-select-forward-button'
           onClick={() => handleUpdateSU(state)}
         >
-          ADD SU
+          ADD Super User
         </Button>
 
         <ul className='sus-list'>
-          <li className='heading'>SU List</li>
+          <li className='heading'>Super User List</li>
           {state.suList.map((item, index) => (
             <li className='su-item' key={`su-${index}`}>
               <p className='su-name'>Name: {item.name}</p>

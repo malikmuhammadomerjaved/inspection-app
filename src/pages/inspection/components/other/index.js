@@ -4,7 +4,7 @@ const Other = ({ other, setOther }) => {
   const { TextArea } = Input;
 
   return (
-    <section>
+    <section className='generic-form-wrapper-inner'>
       <article className='input-wrapper'>
         <h3 className='input-label'>Service Log Book</h3>
         <Rate
@@ -65,16 +65,19 @@ const Other = ({ other, setOther }) => {
         />
       </article>
 
-      <TextArea
-        value={other.generalComments}
-        onChange={(e) =>
-          setOther((st) => ({
-            ...st,
-            generalComments: e.target.value,
-          }))
-        }
-        rows={4}
-      />
+      <article className='general-comments-wrapper'>
+        <h3 className='input-label'>General Comments</h3>
+        <TextArea
+          value={other.generalComments}
+          onChange={(e) =>
+            setOther((st) => ({
+              ...st,
+              generalComments: e.target.value,
+            }))
+          }
+          rows={4}
+        />
+      </article>
     </section>
   );
 };

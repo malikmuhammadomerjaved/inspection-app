@@ -1,0 +1,7 @@
+@import '../../../../common.scss';
+
+.ant-collapse-content-box {
+  .generic-form-wrapper-inner {
+    @extend .common-inner-form;
+  }
+}

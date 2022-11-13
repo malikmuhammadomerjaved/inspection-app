@@ -8,7 +8,7 @@ import './styles.scss';
 const CreateInspector = () => {
   const [state, setState] = useState({
     name: '',
-    inspectors: ['John', 'Bob'],
+    inspectors: ['Luch', 'Shahbaz'],
   });
 
   const navigate = useNavigate();

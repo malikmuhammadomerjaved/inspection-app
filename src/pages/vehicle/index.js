@@ -9,22 +9,22 @@ import './styles.scss';
 const vehicle_list = [
   {
     regoName: 'Rego 1',
-    driverName: 'Driver Name 1',
+    driverName: 'Andrew',
     value: 'rego-1',
   },
   {
     regoName: 'Rego 2',
-    driverName: 'Driver Name 2',
+    driverName: 'Tahlia',
     value: 'rego-2',
   },
   {
     regoName: 'Rego 3',
-    driverName: 'Driver Name 3',
+    driverName: 'Marc',
     value: 'rego-3',
   },
   {
     regoName: 'Rego 4',
-    driverName: 'Driver Name 4',
+    driverName: 'Dan',
     value: 'rego-4',
   },
 ];
@@ -40,7 +40,9 @@ const Vehicle = () => {
   };
 
   const handleClick = () => {
-    navigate(`/category/vehicle/${state.value}`);
+    navigate(`/category/vehicle/${state.value}`, {
+      state: { state },
+    });
   };
 
   return (
@@ -63,7 +65,10 @@ const Vehicle = () => {
               <img className='vehcile-icon' src={vehicleIcon} alt='' />
               <article className='box-inner-content'>
                 <p className='day'>{item.regoName}</p>
-                <p className='date'>{item.driverName}</p>
+                <p className='date'>
+                  Driver Name:
+                  {item.driverName}
+                </p>
               </article>
             </li>
           ))}

@@ -4,7 +4,7 @@ const VehicleCondition = ({ condition, setCondition }) => {
   const { TextArea } = Input;
 
   return (
-    <section>
+    <section className='generic-form-wrapper-inner'>
       <article className='input-wrapper'>
         <h3 className='input-label'>Windscreen Cracks</h3>
         <Rate
@@ -80,16 +80,19 @@ const VehicleCondition = ({ condition, setCondition }) => {
         />
       </article>
 
-      <TextArea
-        value={condition.generalComments}
-        onChange={(e) =>
-          setCondition((st) => ({
-            ...st,
-            generalComments: e.target.value,
-          }))
-        }
-        rows={4}
-      />
+      <article className='general-comments-wrapper'>
+        <h3 className='input-label'>General Comments</h3>
+        <TextArea
+          value={condition.generalComments}
+          onChange={(e) =>
+            setCondition((st) => ({
+              ...st,
+              generalComments: e.target.value,
+            }))
+          }
+          rows={4}
+        />
+      </article>
     </section>
   );
 };

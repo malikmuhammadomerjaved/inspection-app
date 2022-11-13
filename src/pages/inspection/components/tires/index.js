@@ -6,11 +6,11 @@ const Tires = ({ tires, setTires }) => {
 
   return (
     <Collapse
-      defaultActiveKey={['1']}
-      className='tires-form-wrapper'
+      defaultActiveKey={['0']}
+      className='generic-form-wrapper'
       expandIconPosition='end'
     >
-      <Panel header='Front Tires' key='1'>
+      <Panel header='** Front Tires' key='1'>
         <article className='input-wrapper'>
           <h3 className='input-label'>Front Right Tread</h3>
           <Rate
@@ -83,22 +83,25 @@ const Tires = ({ tires, setTires }) => {
           />
         </article>
 
-        <TextArea
-          value={tires.front.generalComments}
-          onChange={(e) =>
-            setTires((st) => ({
-              ...st,
-              front: {
-                ...st.front,
-                generalComments: e.target.value,
-              },
-            }))
-          }
-          rows={4}
-        />
+        <article className='general-comments-wrapper'>
+          <h3 className='input-label'>General Comments</h3>
+          <TextArea
+            value={tires.front.generalComments}
+            onChange={(e) =>
+              setTires((st) => ({
+                ...st,
+                front: {
+                  ...st.front,
+                  generalComments: e.target.value,
+                },
+              }))
+            }
+            rows={4}
+          />
+        </article>
       </Panel>
 
-      <Panel header='Rear Tires' key='2'>
+      <Panel header='** Rear Tires' key='2'>
         <article className='input-wrapper'>
           <h3 className='input-label'>Rear Right Tread</h3>
           <Rate
@@ -171,19 +174,22 @@ const Tires = ({ tires, setTires }) => {
           />
         </article>
 
-        <TextArea
-          value={tires.rear.generalComments}
-          onChange={(e) =>
-            setTires((st) => ({
-              ...st,
-              rear: {
-                ...st.rear,
-                generalComments: e.target.value,
-              },
-            }))
-          }
-          rows={4}
-        />
+        <article className='general-comments-wrapper'>
+          <h3 className='input-label'>General Comments</h3>
+          <TextArea
+            value={tires.rear.generalComments}
+            onChange={(e) =>
+              setTires((st) => ({
+                ...st,
+                rear: {
+                  ...st.rear,
+                  generalComments: e.target.value,
+                },
+              }))
+            }
+            rows={4}
+          />
+        </article>
       </Panel>
     </Collapse>
   );

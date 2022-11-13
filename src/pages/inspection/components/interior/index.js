@@ -1,10 +1,12 @@
 import { Rate, Input } from 'antd';
 
+import './styles.scss';
+
 const Interior = ({ interior, setInterior }) => {
   const { TextArea } = Input;
 
   return (
-    <section>
+    <section className='generic-form-wrapper-inner'>
       <article className='input-wrapper'>
         <h3 className='input-label'>Wiper</h3>
         <Rate
@@ -155,16 +157,19 @@ const Interior = ({ interior, setInterior }) => {
         />
       </article>
 
-      <TextArea
-        value={interior.generalComments}
-        onChange={(e) =>
-          setInterior((st) => ({
-            ...st,
-            generalComments: e.target.value,
-          }))
-        }
-        rows={4}
-      />
+      <article className='general-comments-wrapper'>
+        <h3 className='input-label'>General Comments</h3>
+        <TextArea
+          value={interior.generalComments}
+          onChange={(e) =>
+            setInterior((st) => ({
+              ...st,
+              generalComments: e.target.value,
+            }))
+          }
+          rows={4}
+        />
+      </article>
     </section>
   );
 };

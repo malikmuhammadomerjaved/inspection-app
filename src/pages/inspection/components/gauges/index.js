@@ -4,7 +4,7 @@ const Gauges = ({ gauges, setGauges }) => {
   const { TextArea } = Input;
 
   return (
-    <section>
+    <section className='generic-form-wrapper-inner'>
       <article className='input-wrapper'>
         <h3 className='input-label'>Fuel</h3>
         <Rate
@@ -35,16 +35,19 @@ const Gauges = ({ gauges, setGauges }) => {
         />
       </article>
 
-      <TextArea
-        value={gauges.generalComments}
-        onChange={(e) =>
-          setGauges((st) => ({
-            ...st,
-            generalComments: e.target.value,
-          }))
-        }
-        rows={4}
-      />
+      <article className='general-comments-wrapper'>
+        <h3 className='input-label'>General Comments</h3>
+        <TextArea
+          value={gauges.generalComments}
+          onChange={(e) =>
+            setGauges((st) => ({
+              ...st,
+              generalComments: e.target.value,
+            }))
+          }
+          rows={4}
+        />
+      </article>
     </section>
   );
 };
